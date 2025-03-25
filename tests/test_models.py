@@ -4,7 +4,7 @@ import numpy as np
 import numpy.testing as npt
 import pytest
 
-from inflammation.models import daily_mean, daily_max, daily_min
+from inflammation.models import daily_mean, daily_max, daily_min, load_csv
 
 @pytest.mark.parametrize(
     "test, expected",
@@ -35,3 +35,4 @@ def test_daily_min(test, expected):
 
 def test_daily_max(test, expected):
     npt.assert_array_equal(daily_max(np.array(test)), np.array(expected))
+        
